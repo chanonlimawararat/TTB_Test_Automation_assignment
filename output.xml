@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on darwin)" generated="2024-11-21T01:27:46.184830" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Success" source="/Users/chanon.lim/Desktop/TestQA/Appium/Login_Success.robot">
+<test id="s1-t1" name="Case: Login success" line="66">
+<kw name="Open http://the-internet.herokuapp.com/login">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2024-11-21T01:27:46.321346" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-21T01:27:46.321226" elapsed="15.912972"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:27:46.320850" elapsed="15.913524"/>
+</kw>
+<kw name="Login Success">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:02.235092" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:${Input_Username}</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:02.234857" elapsed="0.710826"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:02.945931" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id:password'.</msg>
+<arg>id:${Input_Password}</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:02.945797" elapsed="0.175373"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:02.234636" elapsed="0.886627"/>
+</kw>
+<kw name="Click Button Login">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>xpath=//button[@type="submit"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:03.121537" elapsed="0.072108"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:03.193881" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:03.193770" elapsed="1.652109"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:03.121397" elapsed="1.724570"/>
+</kw>
+<kw name="Check MSG You logged into a secure area">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>id:${Error_MSG}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:04.846685" elapsed="0.046092"/>
+</kw>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:04.893048" level="INFO">Verifying element 'id:flash' contains exact text 'You logged into a secure area!
+×'.</msg>
+<arg>id:${Error_MSG}</arg>
+<arg>You logged into a secure area!\n×</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-21T01:28:04.892899" elapsed="0.080924"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T01:28:09.974794" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T01:28:04.973936" elapsed="5.001279"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:04.846237" elapsed="5.129325"/>
+</kw>
+<kw name="Click Button Logout">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>xpath=//*[@id="content"]/div/a</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:09.977214" elapsed="0.076146"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:10.053591" level="INFO">Clicking element 'xpath=//*[@id="content"]/div/a'.</msg>
+<arg>xpath=//*[@id="content"]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:10.053478" elapsed="0.919769"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T01:28:15.973680" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T01:28:10.973364" elapsed="5.000707"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:09.976293" elapsed="5.998094"/>
+</kw>
+<kw name="Check Logout Success">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>id:${Error_MSG}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:15.975830" elapsed="0.109297"/>
+</kw>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:16.085363" level="INFO">Verifying element 'id:flash' contains exact text 'You logged out of the secure area!
+×'.</msg>
+<arg>id:${Error_MSG}</arg>
+<arg>You logged out of the secure area!\n×</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-21T01:28:16.085233" elapsed="0.082090"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T01:28:21.168329" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T01:28:16.167418" elapsed="5.001183"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:15.975043" elapsed="5.193822"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:27:46.320590" elapsed="34.848763"/>
+</test>
+<test id="s1-t2" name="Case: Password incorrect" line="74">
+<kw name="Open http://the-internet.herokuapp.com/login">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:21.171646" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-21T01:28:21.171256" elapsed="10.621648"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:21.170741" elapsed="10.622352"/>
+</kw>
+<kw name="Login Fail">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:31.793750" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:${Input_Username}</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:31.793607" elapsed="0.665700"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:32.459527" level="INFO">Typing text 'Password!' into text field 'id:password'.</msg>
+<arg>id:${Input_Password}</arg>
+<arg>Password!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:32.459409" elapsed="0.167774"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:31.793374" elapsed="0.833872"/>
+</kw>
+<kw name="Click Button Login">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>xpath=//button[@type="submit"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:32.627516" elapsed="0.066609"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:32.694372" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:32.694253" elapsed="1.555247"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:32.627372" elapsed="1.622195"/>
+</kw>
+<kw name="Check Error Your password is invalid">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>id:${Error_MSG}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:34.249853" elapsed="0.043896"/>
+</kw>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:34.294054" level="INFO">Verifying element 'id:flash' contains exact text 'Your password is invalid!
+×'.</msg>
+<arg>id:${Error_MSG}</arg>
+<arg>Your password is invalid!\n×</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-21T01:28:34.293914" elapsed="0.060657"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T01:28:39.355671" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T01:28:34.354684" elapsed="5.001127"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:34.249711" elapsed="5.106240"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:21.169977" elapsed="18.186198"/>
+</test>
+<test id="s1-t3" name="Case: Username not found" line="80">
+<kw name="Open http://the-internet.herokuapp.com/login">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:39.357348" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-21T01:28:39.357123" elapsed="10.871018"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:39.356827" elapsed="10.871489"/>
+</kw>
+<kw name="Login Username not found">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:50.229031" level="INFO">Typing text 'tomholland' into text field 'id:username'.</msg>
+<arg>id:${Input_Username}</arg>
+<arg>tomholland</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:50.228881" elapsed="0.839192"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:51.068299" level="INFO">Typing text 'Password!' into text field 'id:password'.</msg>
+<arg>id:${Input_Password}</arg>
+<arg>Password!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:51.068179" elapsed="0.184060"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:50.228619" elapsed="1.023693"/>
+</kw>
+<kw name="Click Button Login">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>xpath=//button[@type="submit"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:51.252598" elapsed="0.118238"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:51.371092" level="INFO">Clicking element 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-21T01:28:51.370968" elapsed="1.460398"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:51.252448" elapsed="1.578988"/>
+</kw>
+<kw name="Check Error Username not found">
+<kw name="Wait Until Element Is Visible" owner="Selenium2Library">
+<arg>id:${Error_MSG}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-21T01:28:52.831733" elapsed="0.039186"/>
+</kw>
+<kw name="Element Text Should Be" owner="Selenium2Library">
+<msg time="2024-11-21T01:28:52.871162" level="INFO">Verifying element 'id:flash' contains exact text 'Your username is invalid!
+×'.</msg>
+<arg>id:${Error_MSG}</arg>
+<arg>Your username is invalid!\n×</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-21T01:28:52.871029" elapsed="0.061274"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-21T01:28:57.933897" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-21T01:28:52.932420" elapsed="5.001900"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:52.831578" elapsed="5.103141"/>
+</kw>
+<status status="PASS" start="2024-11-21T01:28:39.356461" elapsed="18.578832"/>
+</test>
+<status status="PASS" start="2024-11-21T01:27:46.186541" elapsed="71.750209"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login Success">Login Success</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
